@@ -1,6 +1,6 @@
 .vs
-.obj
-.bin
+[Oo]bj
+[Bb]in
 *.user
 *.suo
 *.[Cc]ache
