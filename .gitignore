@@ -23,3 +23,4 @@ Release/
 *.lock
 *.vs
 *.idea
+obj
