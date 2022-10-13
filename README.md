@@ -19,6 +19,7 @@ Simple salary service for calculating employee salaries based on reported time.
 ---
 ### We are giving some interfaces and classes:
 
+
 ```
 public interface ICompany
 {
