@@ -2,6 +2,7 @@
 
 ### Description:
 Simple salary service for calculating employee salaries based on reported time. 
+
 :heavy_check_mark: Unit tested with XUnit and FluentAssertions NuGet.
 
 ### Brief:
