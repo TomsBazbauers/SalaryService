@@ -16,7 +16,7 @@ Simple salary service for calculating employee salaries based on reported time. 
 - No need for UI and database
 - It is not allowed to change the given code.
 ---
-### We are giving some interfaces and classes:
+### We are giving some interfaces and classes :arrow_down:
 
 ```
 public interface ICompany
