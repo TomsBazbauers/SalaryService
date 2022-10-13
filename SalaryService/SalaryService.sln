@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryService", "SalaryService.csproj", "{45BC5B78-8833-4E81-BE55-C1E8F926D9F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryService", "SalaryService.csproj", "{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryService.Tests", "..\..\TTT\SalaryService.Tests\SalaryService.Tests.csproj", "{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{45BC5B78-8833-4E81-BE55-C1E8F926D9F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45BC5B78-8833-4E81-BE55-C1E8F926D9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45BC5B78-8833-4E81-BE55-C1E8F926D9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45BC5B78-8833-4E81-BE55-C1E8F926D9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7841DEA8-EF25-421B-B88E-ECE30AF9CA75}
+		SolutionGuid = {C84467A2-BE4B-4D9C-A3B7-B6B202E71E07}
 	EndGlobalSection
 EndGlobal
