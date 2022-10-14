@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryService", "SalaryService.csproj", "{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryService.Tests", "..\..\TTT\SalaryService.Tests\SalaryService.Tests.csproj", "{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalaryService.Tests", "..\SalaryService.Tests\SalaryService.Tests.csproj", "{D165E405-6953-40A2-94DA-988E0999354A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C03A08D4-ABF4-41D7-98FC-9F8AFA26AB8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42D3246E-E8E5-4CB6-8BAE-6C17FB6752EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D165E405-6953-40A2-94DA-988E0999354A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D165E405-6953-40A2-94DA-988E0999354A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D165E405-6953-40A2-94DA-988E0999354A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D165E405-6953-40A2-94DA-988E0999354A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
