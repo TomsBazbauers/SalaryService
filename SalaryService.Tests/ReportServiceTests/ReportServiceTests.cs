@@ -1,10 +1,10 @@
-﻿using Employee_Salary_Service;
-using Employee_Salary_Service.Exceptions;
+﻿using SalaryService;
 using FluentAssertions;
 using Xunit;
 
-namespace SalaryService.Tests.ReportServiceTests
+namespace SalaryService.Tests
 {
+
     public class ReportServiceTests
     {
         private ReportService _sut;
@@ -23,11 +23,11 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void AddReport_AllInputsValid_ReportAdded()
+        public void AddReport_InputsValidAllProperties_ReportAdded()
         {
             //Arrange
             var id = 101;
-            var date = DateTime.Now;
+            var date = new DateTime(2022, 01, 02);
             var hours = 7;
             var minutes = 30;
 
@@ -42,7 +42,7 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void AddReport_IdInputInvalid_ThrowsException()
+        public void AddReport_InputInvalidId_ThrowsException()
         {
             //Arrange
             var id = 0;
@@ -59,7 +59,7 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void AddReport_HourInputInvalid_ThrowsException()
+        public void AddReport_InputInvalidHours_ThrowsException()
         {
             //Arrange
             var id = 111;
@@ -76,7 +76,7 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void GetMonthly_InputSmallSize_ReturnExpected()
+        public void GetMonthly_InputValidSmall_ReturnsCorrectReports()
         {
             //Arrange
             var employeeList = new List<Employee> { new Employee(88, "Patrick Kane", 10), new Employee(8, "Cale Makar", 12) };
@@ -100,7 +100,7 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void PromptReport_InputSmallSize_ReturnExpected()
+        public void PromptReport_InputValidSmall_ReturnsCorrectReports()
         {
             //Arrange
             var employee = new Employee(16, "Mitchell Marner", 10);
@@ -125,7 +125,7 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void FilterIdByDate_InputSmallSize_ReturnExpected()
+        public void FilterIdByDate_InputValidSmall_ReturnsCorrectReports()
         {
             //Arrange
             _dailyReports.Add(new EmployeeDailyReport(88, new DateTime(2022, 10, 10), 5, 0));
@@ -143,7 +143,7 @@ namespace SalaryService.Tests.ReportServiceTests
         }
 
         [Fact]
-        public void GetLastReportDate_InputValid_ReturnExpected()
+        public void GetLastReportDate_InputValid_ReturnsCorrectDate()
         {
             //Arrange
             _monthlyReports.Add(new EmployeeMonthlyReport(12, new DateTime(2022, 09, 01), new DateTime(2022, 09, 11), 100));

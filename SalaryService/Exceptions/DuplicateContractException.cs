@@ -1,4 +1,4 @@
-﻿namespace Employee_Salary_Service.Exceptions
+﻿namespace SalaryService
 {
     public class DuplicateContractException : Exception
     {

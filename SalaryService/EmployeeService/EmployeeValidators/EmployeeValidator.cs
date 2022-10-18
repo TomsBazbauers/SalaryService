@@ -1,6 +1,4 @@
-﻿using Employee_Salary_Service.Exceptions;
-
-namespace Employee_Salary_Service
+﻿namespace SalaryService
 {
     public class EmployeeValidator : IEmployeeValidator
     {

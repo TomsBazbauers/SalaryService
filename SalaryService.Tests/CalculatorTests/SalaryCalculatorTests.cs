@@ -1,4 +1,4 @@
-using Employee_Salary_Service;
+using SalaryService;
 using FluentAssertions;
 using Xunit;
 
@@ -22,28 +22,28 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void GetSalary_InputSalaryDecimal_ReturnExpected()
+        public void GetSalary_InputSalaryDecimal_ReturnsExpectedSalary()
         {
             //Arrange
-            var salaryForId = 8.5m;
-            var expected = Math.Round(_reports.Select(r => r.HoursWorked * salaryForId).ToList().Sum(), 2);
+            var testSalary = 8.5m;
+            var expected = Math.Round(_reports.Select(r => r.HoursWorked * testSalary).ToList().Sum(), 2);
 
             //Act
-            var actual = _sut.GetSalary(_reports, salaryForId);
+            var actual = _sut.GetSalary(_reports, testSalary);
 
             //Assert
             actual.Should().Be(expected);
         }
 
         [Fact]
-        public void GetSalary_InputSalaryInteger_ReturnExpected()
+        public void GetSalary_InputSalaryInteger_ReturnsExpectedSalary()
         {
             //Arrange
-            var salaryForId = 8;
-            var expected = Math.Round(_reports.Select(r => r.HoursWorked * salaryForId).ToList().Sum(), 2);
+            var testSalary = 8;
+            var expected = Math.Round(_reports.Select(r => r.HoursWorked * testSalary).ToList().Sum(), 2);
 
             //Act
-            var actual = _sut.GetSalary(_reports, salaryForId);
+            var actual = _sut.GetSalary(_reports, testSalary);
 
             //Assert
             actual.Should().Be(expected);

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Employee_Salary_Service
+﻿namespace SalaryService
 {
     public interface IReportValidator
     {
@@ -15,5 +9,7 @@ namespace Employee_Salary_Service
         public bool HasValidId(int id);
 
         public bool HasValidDate(DateTime date);
+
+        public bool IsUnique(int id, DateTime date, List<EmployeeDailyReport> reports);
     }
 }

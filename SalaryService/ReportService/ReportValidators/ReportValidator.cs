@@ -1,11 +1,11 @@
-﻿using Employee_Salary_Service.Exceptions;
+﻿using SalaryService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employee_Salary_Service
+namespace SalaryService
 {
     public class ReportValidator : IReportValidator
     {
@@ -28,6 +28,11 @@ namespace Employee_Salary_Service
         public bool HasValidDate(DateTime date)
         {
             return date != DateTime.MinValue && date <= DateTime.Now ? true : throw new InvalidReportDateException(date.ToString());
+        }
+
+        public bool IsUnique(int id, DateTime date, List<EmployeeDailyReport> reports)
+        {
+            return !reports.Any(report => report.EmployeeId == id && report.Date == date) ? true : throw new DuplicateReportException(id.ToString());
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using Employee_Salary_Service;
-
-namespace Employee_Salary_Service
+﻿namespace SalaryService
 {
     public class ReportService : IReportService
     {
@@ -26,7 +24,8 @@ namespace Employee_Salary_Service
         {
             if (_reportValidator.IsValid(hours, minutes) 
                 && _reportValidator.HasValidId(employeeId)
-                && _reportValidator.HasValidDate(dateAndTime))
+                && _reportValidator.HasValidDate(dateAndTime)
+                && _reportValidator.IsUnique(employeeId, dateAndTime, _dailyReports))
             {
                 _dailyReports.Add(new EmployeeDailyReport(employeeId, dateAndTime, hours, minutes));
             }

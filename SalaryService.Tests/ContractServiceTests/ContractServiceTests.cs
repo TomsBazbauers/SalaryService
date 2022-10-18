@@ -1,5 +1,4 @@
-﻿using Employee_Salary_Service;
-using Employee_Salary_Service.Exceptions;
+﻿using SalaryService;
 using FluentAssertions;
 using Xunit;
 
@@ -19,7 +18,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void AddContract_InputValid_ContractAdded()
+        public void AddContract_InputValid_CorrectContractAdded()
         {
             //Arrange
             var employee = new Employee(88, "Patrick Kane", 10);
@@ -53,7 +52,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void AddContract_InputDuplicateId_ThrowsException()
+        public void AddContract_InputInvalidDuplicate_ThrowsException()
         {
             //Arrange
             var employee = new Employee(88, "Patrick Kane", 10);
@@ -70,7 +69,7 @@ namespace SalaryService.Tests
                 .WithMessage($"[Contract with the properties: '{employee.Id}' is already registered in the system]");
         }
         [Fact]
-        public void CloseContract_InputValid_ContractClosed()
+        public void CloseContract_InputValid_CorrectContractClosed()
         {
             //Arrange
             var testId = 33;
@@ -106,7 +105,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void GetActiveContract_InputValid_ReturnsExpected()
+        public void GetActiveContract_InputValid_ReturnsCorrectContract()
         {
             //Arrange
             var testId = 2;

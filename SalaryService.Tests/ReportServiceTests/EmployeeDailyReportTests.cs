@@ -1,4 +1,4 @@
-﻿using Employee_Salary_Service;
+﻿using SalaryService;
 using FluentAssertions;
 using Xunit;
 

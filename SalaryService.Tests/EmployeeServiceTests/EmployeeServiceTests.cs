@@ -1,5 +1,4 @@
-﻿using Employee_Salary_Service;
-using Employee_Salary_Service.Exceptions;
+﻿using SalaryService;
 using FluentAssertions;
 using Xunit;
 
@@ -99,7 +98,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void Register_InputDuplicate_ThrowsException()
+        public void Register_InputInvalidDuplicate_ThrowsException()
         {
             //Arrange
             var testId = 8;
@@ -118,7 +117,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void Unregister_InputValid_EmployeeUnregistered()
+        public void Unregister_InputValid_CorrectEmployeeUnregistered()
         {
             //Arrange
             var testEmployeeA = new Employee(8, "Cale Makar", 12);
@@ -157,7 +156,7 @@ namespace SalaryService.Tests
 
 
         [Fact]
-        public void IsFound_InputValid_ReturnsTrue()
+        public void IsFound_InputValid_ReturnsIsFoundTrue()
         {
             //Arrange
             var testEmployeeA = new Employee(8, "Cale Makar", 12);
@@ -195,7 +194,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void GetById_InputValid_ReturnsExpected()
+        public void GetById_InputValid_ReturnsCorrectEmployee()
         {
             //Arrange
             var testEmployeeA = new Employee(8, "Cale Makar", 12);

@@ -1,5 +1,4 @@
-﻿using Employee_Salary_Service;
-using Employee_Salary_Service.Exceptions;
+﻿using SalaryService;
 using FluentAssertions;
 using Xunit;
 
@@ -30,7 +29,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void AddEmployee_InputSingleValid_EmployeeAdded()
+        public void AddEmployee_InputValidSingle_EmployeeAdded()
         {
             //Arrange
             var testStartDate = new DateTime(2022, 06, 06);
@@ -51,7 +50,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void AddEmployee_InputMultipleValid_EmployeesAdded()
+        public void AddEmployee_InputValidMultiple_AllEmployeesAdded()
         {
             //Arrange
             DateTime[] testDates = { new DateTime(2022, 05, 06), new DateTime(2022, 06, 06), new DateTime(2022, 07, 06) };
@@ -83,7 +82,7 @@ namespace SalaryService.Tests
             _sut.Employees[2].HourlySalary.Should().Be(testSalaries[2]);
         }
         [Fact]
-        public void AddEmployee_InputInvalidSalary_ThrowsException()
+        public void AddEmployee_InputValidSalary_ThrowsException()
         {
             //Arrange
             var testStartDate = new DateTime(2022, 06, 06);
@@ -138,7 +137,7 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void AddEmployee_InputDuplicateId_ThrowsException()
+        public void AddEmployee_InputInvalidDuplicate_ThrowsException()
         {
             //Arrange
             DateTime[] testDates = { new DateTime(2022, 05, 06), new DateTime(2022, 06, 06) };
@@ -162,10 +161,10 @@ namespace SalaryService.Tests
         }
 
         [Fact]
-        public void GetMonthlyReport_InputValid_ReturnsReport()
+        public void GetMonthlyReport_InputValid_ReturnsCorrectReport()
         {
             //Arrange
-            var testId = 64;
+            var testId = 34;
             var testFullName = "Auston Matthews";
             var testSalary = 12;
             var testH = 7;
@@ -174,8 +173,8 @@ namespace SalaryService.Tests
             var testStartDate = new DateTime(2022, 06, 06);
             var testEndDate = new DateTime(2022, 10, 10);
             _employeeService.Employees.Add(new Employee(testId, testFullName, testSalary));
-            _reportService.DailyReports.Add(new EmployeeDailyReport(64, new DateTime(2022, 10, 10), testH, testM));
-            _reportService.DailyReports.Add(new EmployeeDailyReport(64, new DateTime(2022, 10, 10), testH, testM));
+            _reportService.DailyReports.Add(new EmployeeDailyReport(34, new DateTime(2022, 10, 10), testH, testM));
+            _reportService.DailyReports.Add(new EmployeeDailyReport(34, new DateTime(2022, 10, 10), testH, testM));
 
             //Act
             var actual = _sut.GetMonthlyReport(testStartDate, testEndDate);
@@ -185,11 +184,11 @@ namespace SalaryService.Tests
             actual[0].EmployeeId.Should().Be(testId);
             actual[0].Year.Should().Be(testStartDate.Year);
             actual[0].Month.Should().Be(testStartDate.Month);
-            actual[0].Salary.Should().Be(reportC *(testSalary * (testH + testM / 60m)));
+            actual[0].Salary.Should().Be(reportC * (testSalary * (testH + testM / 60m)));
         }
 
         [Fact]
-        public void RemoveEmployee_InputValid_EmployeeRemoved()
+        public void RemoveEmployee_InputValid_CorrectEmployeeRemoved()
         {
             //Arrange
             var testId = 64;

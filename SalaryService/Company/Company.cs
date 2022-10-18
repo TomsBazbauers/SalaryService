@@ -1,4 +1,4 @@
-﻿namespace Employee_Salary_Service
+﻿namespace SalaryService
 {
     public class Company : ICompany
     {
