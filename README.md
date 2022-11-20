@@ -2,7 +2,7 @@
 
 ### Description:
 Simple salary service for calculating employee salaries based on reported time. 
-- Unit tested with XUnit and FluentAssertions NuGet.
+- Unit tested with XUnit and FluentAssertions.
 
 ### Brief:
 - A company can have any number of employees.
